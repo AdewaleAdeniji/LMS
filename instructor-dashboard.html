@@ -10,7 +10,7 @@
               content="IE=edge">
         <meta name="viewport"
               content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Dashboard</title>
+        <title>Lecturer Dashboard</title>
 
         <!-- Prevent the demo from appearing in search engines -->
         <meta name="robots"
@@ -425,15 +425,10 @@
                                 <h1 class="h2 mb-8pt">Dashboard</h1>
                                 <div>
 
+                                    
                                     <span class="chip chip-outline-secondary d-inline-flex align-items-center"
                                           data-toggle="tooltip"
-                                          data-title="Earnings"
-                                          data-placement="bottom">
-                                        <i class="material-icons icon--left">trending_up</i> &dollar;12.3k
-                                    </span>
-                                    <span class="chip chip-outline-secondary d-inline-flex align-items-center"
-                                          data-toggle="tooltip"
-                                          data-title="Sales"
+                                          data-title="Assignments"
                                           data-placement="bottom">
                                         <i class="material-icons icon--left">receipt</i> 264
                                     </span>
@@ -455,417 +450,662 @@
                         <div class="row">
                             <div class="col-lg-8">
 
-                                <div class="mb-24pt">
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <div class="card border-1 border-left-3 border-left-accent text-center mb-lg-0">
-                                                <div class="card-body">
-                                                    <h4 class="h2 mb-0">&dollar;1,569.00</h4>
-                                                    <div>Earnings this month</div>
+                                <div class="page-separator">
+                                    <div class="page-separator__text">Your Courses</div>
+                                </div>
+
+                                <div class="row card-group-row">
+
+                                    <div class="col-sm-6 col-xl-4 card-group-row__col">
+
+                                        <div class="card card-sm card--elevated p-relative o-hidden overlay overlay--primary-dodger-blue js-overlay card-group-row__card undefined"
+                                             data-toggle="popover"
+                                             data-trigger="click">
+
+                                            <a href="student-take-course.html"
+                                               class="card-img-top js-image"
+                                               data-position=""
+                                               data-height="140">
+                                                <img src="public/images/paths/angular_430x168.png"
+                                                     alt="course">
+                                                <span class="overlay__content">
+                                                    <span class="overlay__action d-flex flex-column text-center">
+                                                        <i class="material-icons icon-32pt">play_circle_outline</i>
+                                                        <span class="card-title text-white">Resume</span>
+                                                    </span>
+                                                </span>
+                                            </a>
+
+                                            <div class="card-body flex">
+                                                <div class="d-flex">
+                                                    <div class="flex">
+                                                        <a class="card-title"
+                                                           href="student-take-course.html">Electromagetism</a>
+                                                        <small class="text-50 font-weight-bold mb-4pt">234 Students Enrolled</small>
+                                                    </div>
+                                                    <a href="student-take-course.html"
+                                                       data-toggle="tooltip"
+                                                       data-title="Remove Favorite"
+                                                       data-placement="top"
+                                                       data-boundary="window"
+                                                       class="ml-4pt material-icons text-20 card-course__icon-favorite">favorite</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                   
+                                                    <!-- <small class="text-50">6 hours</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="card-footer">
+                                                <div class="row justify-content-between">
+                                                    <div class="col-auto d-flex align-items-center">
+                                                        <span class="material-icons icon-16pt text-50 mr-4pt">access_time</span>
+                                                        <p class="flex text-50 lh-1 mb-0"><small>6 hours</small></p>
+                                                    </div>
+                                                    <div class="col-auto d-flex align-items-center">
+                                                        <span class="material-icons icon-16pt text-50 mr-4pt">play_circle_outline</span>
+                                                        <p class="flex text-50 lh-1 mb-0"><small>12 lessons</small></p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4">
-                                            <div class="card text-center mb-lg-0">
-                                                <div class="card-body">
-                                                    <h4 class="h2 mb-0">&dollar;3,917.80</h4>
-                                                    <div>Account Balance</div>
+                                        <div class="popoverContainer d-none">
+                                            <div class="media">
+                                                <div class="media-left mr-12pt">
+                                                    <img src="public/images/paths/angular_40x40%402x.png"
+                                                         width="40"
+                                                         height="40"
+                                                         alt="Angular"
+                                                         class="rounded">
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="card-title mb-0">Learn Angular fundamentals</div>
+                                                    <p class="lh-1 mb-0">
+                                                        <span class="text-50 small">with</span>
+                                                        <span class="text-50 small font-weight-bold">400 students enrolled</span>
+                                                    </p>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="card text-center mb-lg-0">
-                                                <div class="card-body">
-                                                    <h4 class="h2 mb-0">&dollar;10,211.50</h4>
-                                                    <div>Total Sales</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <div class="page-separator">
-                                    <div class="page-separator__text">Earnings</div>
-                                </div>
-                                <div class="card card-body mb-32pt">
-                                    <div id="legend"
-                                         class="chart-legend mt-0 mb-24pt justify-content-start"></div>
-                                    <div class="chart"
-                                         style="height: 320px;">
-                                        <canvas id="earningsChart"
-                                                class="chart-canvas js-update-chart-bar"
-                                                data-chart-legend="#legend"
-                                                data-chart-line-background-color="gradient:primary,gray"
-                                                data-chart-prefix="$"
-                                                data-chart-suffix="k"></canvas>
-                                    </div>
-                                </div>
+                                            <p class="my-16pt text-70">Learn the fundamentals of working with Angular and how to create basic applications.</p>
 
-                                <div class="page-separator">
-                                    <div class="page-separator__text">Transactions</div>
-                                </div>
-                                <div class="card">
-                                    <div data-toggle="lists"
-                                         data-lists-values='[
-      "js-lists-values-course", 
-      "js-lists-values-document",
-      "js-lists-values-amount",
-      "js-lists-values-date"
-    ]'
-                                         data-lists-sort-by="js-lists-values-date"
-                                         data-lists-sort-desc="true"
-                                         class="table-responsive">
-                                        <table class="table table-flush table-nowrap">
-                                            <thead>
-                                                <tr>
-                                                    <th colspan="2">
-                                                        <a href="javascript:void(0)"
-                                                           class="sort"
-                                                           data-sort="js-lists-values-course">Course</a>
-                                                        <a href="javascript:void(0)"
-                                                           class="sort"
-                                                           data-sort="js-lists-values-document">Document</a>
-                                                        <a href="javascript:void(0)"
-                                                           class="sort"
-                                                           data-sort="js-lists-values-amount">Amount</a>
-                                                        <a href="javascript:void(0)"
-                                                           class="sort"
-                                                           data-sort="js-lists-values-date">Date</a>
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody class="list">
-
-                                                <tr>
-                                                    <td>
-                                                        <div class="d-flex flex-nowrap align-items-center">
-                                                            <a href="instructor-edit-course.html"
-                                                               class="avatar avatar-4by3 overlay overlay--primary mr-12pt">
-                                                                <img src="public/images/paths/angular_routing_200x168.png"
-                                                                     alt="course"
-                                                                     class="avatar-img rounded">
-                                                                <span class="overlay__content"></span>
-                                                            </a>
-                                                            <div class="flex">
-                                                                <a class="card-title js-lists-values-course"
-                                                                   href="instructor-edit-course.html">Angular Routing In-Depth</a>
-                                                                <small class="text-muted mr-1">
-                                                                    Invoice
-                                                                    <a href="invoice.html"
-                                                                       style="color: inherit;"
-                                                                       class="js-lists-values-document">#8734</a> -
-                                                                    &dollar;<span class="js-lists-values-amount">89</span> USD
-                                                                </small>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-right">
-                                                        <small class="text-muted text-uppercase js-lists-values-date">12 Nov 2018</small>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <div class="d-flex flex-nowrap align-items-center">
-                                                            <a href="instructor-edit-course.html"
-                                                               class="avatar avatar-4by3 overlay overlay--primary mr-12pt">
-                                                                <img src="public/images/paths/angular_testing_200x168.png"
-                                                                     alt="course"
-                                                                     class="avatar-img rounded">
-                                                                <span class="overlay__content"></span>
-                                                            </a>
-                                                            <div class="flex">
-                                                                <a class="card-title js-lists-values-course"
-                                                                   href="instructor-edit-course.html">Angular Unit Testing</a>
-                                                                <small class="text-muted mr-1">
-                                                                    Invoice
-                                                                    <a href="invoice.html"
-                                                                       style="color: inherit;"
-                                                                       class="js-lists-values-document">#8735</a> -
-                                                                    &dollar;<span class="js-lists-values-amount">89</span> USD
-                                                                </small>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-right">
-                                                        <small class="text-muted text-uppercase js-lists-values-date">13 Nov 2018</small>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <div class="d-flex flex-nowrap align-items-center">
-                                                            <a href="instructor-edit-course.html"
-                                                               class="avatar avatar-4by3 overlay overlay--primary mr-12pt">
-                                                                <img src="public/images/paths/typescript_200x168.png"
-                                                                     alt="course"
-                                                                     class="avatar-img rounded">
-                                                                <span class="overlay__content"></span>
-                                                            </a>
-                                                            <div class="flex">
-                                                                <a class="card-title js-lists-values-course"
-                                                                   href="instructor-edit-course.html">Introduction to TypeScript</a>
-                                                                <small class="text-muted mr-1">
-                                                                    Invoice
-                                                                    <a href="invoice.html"
-                                                                       style="color: inherit;"
-                                                                       class="js-lists-values-document">#8736</a> -
-                                                                    &dollar;<span class="js-lists-values-amount">89</span> USD
-                                                                </small>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-right">
-                                                        <small class="text-muted text-uppercase js-lists-values-date">14 Nov 2018</small>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <div class="d-flex flex-nowrap align-items-center">
-                                                            <a href="instructor-edit-course.html"
-                                                               class="avatar avatar-4by3 overlay overlay--primary mr-12pt">
-                                                                <img src="public/images/paths/angular_200x168.png"
-                                                                     alt="course"
-                                                                     class="avatar-img rounded">
-                                                                <span class="overlay__content"></span>
-                                                            </a>
-                                                            <div class="flex">
-                                                                <a class="card-title js-lists-values-course"
-                                                                   href="instructor-edit-course.html">Learn Angular Fundamentals</a>
-                                                                <small class="text-muted mr-1">
-                                                                    Invoice
-                                                                    <a href="invoice.html"
-                                                                       style="color: inherit;"
-                                                                       class="js-lists-values-document">#8737</a> -
-                                                                    &dollar;<span class="js-lists-values-amount">89</span> USD
-                                                                </small>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-right">
-                                                        <small class="text-muted text-uppercase js-lists-values-date">15 Nov 2018</small>
-                                                    </td>
-                                                </tr>
-
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-
-                                <div class="page-separator">
-                                    <div class="page-separator__text">Comments</div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="media">
-                                            <div class="media-left mr-12pt">
-                                                <a href="#"
-                                                   class="avatar avatar-sm">
-                                                    <!-- <img src="public/images/people/110/guy-9.jpg" alt="Guy" class="avatar-img rounded-circle"> -->
-                                                    <span class="avatar-title rounded-circle">LB</span>
-                                                </a>
-                                            </div>
-                                            <div class="media-body d-flex flex-column">
+                                            <div class="mb-16pt">
                                                 <div class="d-flex align-items-center">
-                                                    <a href="profile.html"
-                                                       class="card-title">Laza Bogdan</a>
-                                                    <small class="ml-auto text-muted">27 min ago</small><br>
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt">check</span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Fundamentals of working with Angular</small></p>
                                                 </div>
-                                                <span class="text-muted">on <a href="instructor-edit-course.html"
-                                                       class="text-50"
-                                                       style="text-decoration: underline;">Data Visualization With Chart.js</a></span>
-                                                <p class="mt-1 mb-0 text-70">How can I load Charts on a page?</p>
-                                            </div>
-                                        </div>
-                                        <div class="media ml-sm-32pt mt-3 border rounded p-3 card mb-0 d-inline-flex measure-paragraph-max">
-                                            <div class="media-left mr-12pt">
-                                                <a href="#"
-                                                   class="avatar avatar-sm">
-                                                    <!-- <img src="public/images/people/110/guy-6.jpg" alt="Guy" class="avatar-img rounded-circle"> -->
-                                                    <span class="avatar-title rounded-circle">FM</span>
-                                                </a>
-                                            </div>
-                                            <div class="media-body">
                                                 <div class="d-flex align-items-center">
-                                                    <a href="profile.html"
-                                                       class="card-title">FrontendMatter</a>
-                                                    <small class="ml-auto text-muted">just now</small>
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt">check</span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Create complete Angular applications</small></p>
                                                 </div>
-                                                <p class="mt-1 mb-0 text-70">Hi Bogdan,<br> Thank you for purchasing our course! <br><br>Please have a look at the charts library documentation <a href="#"
-                                                       class="text-underline">here</a> and follow the instructions.</p>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt">check</span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Working with the Angular CLI</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt">check</span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Understanding Dependency Injection</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt">check</span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Testing with Angular</small></p>
+                                                </div>
+                                            </div>
+
+                                            <div class="my-32pt">
+                                                <div class="d-flex align-items-center mb-8pt justify-content-center">
+                                                    <div class="d-flex align-items-center mr-8pt">
+                                                        <span class="material-icons icon-16pt text-50 mr-4pt">access_time</span>
+                                                        <p class="flex text-50 lh-1 mb-0"><small>50 minutes left</small></p>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="material-icons icon-16pt text-50 mr-4pt">play_circle_outline</span>
+                                                        <p class="flex text-50 lh-1 mb-0"><small>12 lessons</small></p>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex align-items-center justify-content-center">
+                                                    <a href="instructor-edit-course.html"
+                                                       class="btn btn-primary mr-8pt">Edit Course</a>
+                                                   
+                                                </div>
+                                            </div>
+
+                                           
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-sm-6 col-xl-4 card-group-row__col">
+
+                                        <div class="card card-sm card--elevated p-relative o-hidden overlay overlay--primary-dodger-blue js-overlay card-group-row__card undefined"
+                                             data-toggle="popover"
+                                             data-trigger="click">
+
+                                            <a href="student-take-course.html"
+                                               class="card-img-top js-image"
+                                               data-position=""
+                                               data-height="140">
+                                                <img src="public/images/paths/angular_430x168.png"
+                                                     alt="course">
+                                                <span class="overlay__content">
+                                                    <span class="overlay__action d-flex flex-column text-center">
+                                                        <i class="material-icons icon-32pt">play_circle_outline</i>
+                                                        <span class="card-title text-white">Resume</span>
+                                                    </span>
+                                                </span>
+                                            </a>
+
+                                            <div class="card-body flex">
+                                                <div class="d-flex">
+                                                    <div class="flex">
+                                                        <a class="card-title"
+                                                           href="student-take-course.html">Computational Physics</a>
+                                                        <small class="text-50 font-weight-bold mb-4pt">Prof Elijah Murray</small>
+                                                    </div>
+                                                    <a href="student-take-course.html"
+                                                       data-toggle="tooltip"
+                                                       data-title="Remove Favorite"
+                                                       data-placement="top"
+                                                       data-boundary="window"
+                                                       class="ml-4pt material-icons text-20 card-course__icon-favorite">favorite</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                   
+                                                    <!-- <small class="text-50">6 hours</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="card-footer">
+                                                <div class="row justify-content-between">
+                                                    <div class="col-auto d-flex align-items-center">
+                                                        <span class="material-icons icon-16pt text-50 mr-4pt">access_time</span>
+                                                        <p class="flex text-50 lh-1 mb-0"><small>6 hours</small></p>
+                                                    </div>
+                                                    <div class="col-auto d-flex align-items-center">
+                                                        <span class="material-icons icon-16pt text-50 mr-4pt">play_circle_outline</span>
+                                                        <p class="flex text-50 lh-1 mb-0"><small>12 lessons</small></p>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="card-footer">
-                                        <form action="#"
-                                              id="message-reply">
-                                            <div class="input-group input-group-merge">
-                                                <input type="text"
-                                                       class="form-control form-control-appended"
-                                                       required=""
-                                                       placeholder="Quick Reply">
-                                                <div class="input-group-append">
-                                                    <div class="input-group-text pr-2">
-                                                        <button class="btn btn-flush"
-                                                                type="button"><i class="material-icons">tag_faces</i></button>
+                                        <div class="popoverContainer d-none">
+                                            <div class="media">
+                                                <div class="media-left mr-12pt">
+                                                    <img src="public/images/paths/angular_40x40%402x.png"
+                                                         width="40"
+                                                         height="40"
+                                                         alt="Angular"
+                                                         class="rounded">
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="card-title mb-0">Learn Angular fundamentals</div>
+                                                    <p class="lh-1 mb-0">
+                                                        <span class="text-50 small">with</span>
+                                                        <span class="text-50 small font-weight-bold">Elijah Murray</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <p class="my-16pt text-70">Learn the fundamentals of working with Angular and how to create basic applications.</p>
+
+                                            <div class="mb-16pt">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt">check</span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Fundamentals of working with Angular</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt">check</span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Create complete Angular applications</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt">check</span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Working with the Angular CLI</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt">check</span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Understanding Dependency Injection</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt">check</span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Testing with Angular</small></p>
+                                                </div>
+                                            </div>
+
+                                            <div class="my-32pt">
+                                                <div class="d-flex align-items-center mb-8pt justify-content-center">
+                                                    <div class="d-flex align-items-center mr-8pt">
+                                                        <span class="material-icons icon-16pt text-50 mr-4pt">access_time</span>
+                                                        <p class="flex text-50 lh-1 mb-0"><small>50 minutes left</small></p>
                                                     </div>
-                                                    <div class="input-group-text pl-0">
-                                                        <div class="custom-file custom-file-naked d-flex"
-                                                             style="width: 24px; overflow: hidden;">
-                                                            <input type="file"
-                                                                   class="custom-file-input"
-                                                                   id="customFile">
-                                                            <label class="custom-file-label"
-                                                                   style="color: inherit;"
-                                                                   for="customFile">
-                                                                <i class="material-icons">attach_file</i>
-                                                            </label>
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="material-icons icon-16pt text-50 mr-4pt">play_circle_outline</span>
+                                                        <p class="flex text-50 lh-1 mb-0"><small>12 lessons</small></p>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex align-items-center justify-content-center">
+                                                    <a href="instructor-edit-course.html"
+                                                       class="btn btn-primary mr-8pt">Edit Course</a>
+                                                   
+                                                </div>
+                                            </div>
+
+                                           
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                                
+                                <div class="page-separator">
+                                    <div class="page-separator__text">Quizzes</div>
+                                </div>
+
+                                <div class="row card-group-row">
+
+                                    <div class="card-group-row__col col-md-6">
+
+                                        <div class="card card-group-row__card card-sm">
+                                            <div class="card-body d-flex align-items-center">
+                                                <a href="student-take-quiz.html"
+                                                   class="avatar overlay overlay--primary avatar-4by3 mr-12pt">
+                                                    <img src="public/images/paths/typescript_200x168.png"
+                                                         alt="Introduction to TypeScript"
+                                                         class="avatar-img rounded">
+                                                    <span class="overlay__content"></span>
+                                                </a>
+                                                <div class="flex mr-12pt">
+                                                    <a class="card-title"
+                                                       href="student-take-quiz.html">Introduction to TypeScript</a>
+                                                    <div class="card-subtitle text-50">3 days ago</div>
+                                                </div>
+                                                <div class="d-flex flex-column align-items-center">
+                                                    <span class="lead text-headings lh-1">2.8</span>
+                                                    <small class="text-50 text-uppercase text-headings">Score</small>
+                                                </div>
+                                            </div>
+
+                                            <div class="progress rounded-0"
+                                                 style="height: 4px;">
+                                                <div class="progress-bar bg-primary"
+                                                     role="progressbar"
+                                                     style="width: 37%;"
+                                                     aria-valuenow="37"
+                                                     aria-valuemin="0"
+                                                     aria-valuemax="100"></div>
+                                            </div>
+
+                                            <div class="card-footer">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex mr-2">
+                                                        <a href="student-take-quiz.html"
+                                                           class="btn btn-light btn-sm">
+
+                                                            <i class="material-icons icon--left">refresh</i> Edit Quiz
+
+                                                        </a>
+                                                    </div>
+
+                                                    <div class="dropdown">
+                                                        <a href="#"
+                                                           data-toggle="dropdown"
+                                                           data-caret="false"
+                                                           class="text-muted"><i class="material-icons">more_horiz</i></a>
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <a href="student-take-quiz.html"
+                                                               class="dropdown-item">Continue</a>
+                                                            <a href="student-quiz-result-details.html"
+                                                               class="dropdown-item">View Result</a>
+                                                            <div class="dropdown-divider"></div>
+                                                            <a href="student-take-quiz.html"
+                                                               class="dropdown-item text-danger">Reset Quiz</a>
                                                         </div>
                                                     </div>
-                                                    <div class="input-group-text pl-0">
-                                                        <button class="btn btn-flush"
-                                                                type="button"><i class="material-icons">send</i></button>
-                                                    </div>
+
                                                 </div>
                                             </div>
-                                        </form>
+                                        </div>
+
+                                    </div>
+
+                                    
+
+                                </div>
+
+                                <div class="mb-32pt">
+
+                                    <ul class="pagination justify-content-start pagination-xsm m-0">
+                                        <li class="page-item disabled">
+                                            <a class="page-link"
+                                               href="#"
+                                               aria-label="Previous">
+                                                <span aria-hidden="true"
+                                                      class="material-icons">chevron_left</span>
+                                                <span>Prev</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link"
+                                               href="#"
+                                               aria-label="Page 1">
+                                                <span>1</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link"
+                                               href="#"
+                                               aria-label="Page 2">
+                                                <span>2</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link"
+                                               href="#"
+                                               aria-label="Next">
+                                                <span>Next</span>
+                                                <span aria-hidden="true"
+                                                      class="material-icons">chevron_right</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                    <!-- <ul class="pagination justify-content-center pagination-sm">
+                                            <li class="page-item disabled">
+                                                <a class="page-link" href="#" aria-label="Previous">
+                                                <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                                <span>Prev</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item active">
+                                                <a class="page-link" href="#" aria-label="1">
+                                                <span>1</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="1">
+                                                <span>2</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Next">
+                                                <span>Next</span>
+                                                <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                                </a>
+                                            </li>
+                                            </ul> -->
+                                </div>
+                               
+                                 <div class="page-separator">
+                                    <div class="page-separator__text">Student Forum</div>
+                                </div>
+
+                                <div class="card">
+
+                                    <div class="list-group list-group-flush">
+
+                                        <div class="list-group-item p-3">
+                                            <div class="row align-items-start">
+                                                <div class="col-md-3 mb-8pt mb-md-0">
+                                                    <div class="media align-items-center">
+                                                        <div class="media-left mr-12pt">
+                                                            <a href="#"
+                                                               class="avatar avatar-sm">
+                                                                <!-- <img src="../../LB" alt="avatar" class="avatar-img rounded-circle"> -->
+                                                                <span class="avatar-title rounded-circle">LB</span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="d-flex flex-column media-body media-middle">
+                                                            <a href="#"
+                                                               class="card-title">Laza Bogdan</a>
+                                                            <small class="text-muted">2 days ago</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col mb-8pt mb-md-0">
+                                                    <p class="mb-8pt"><a href="discussion.html"
+                                                           class="text-body"><strong>Using Angular HttpClientModule instead of HttpModule</strong></a></p>
+
+                                                    <a href="discussion.html"
+                                                       class="chip chip-outline-secondary">Angular fundamentals</a>
+
+                                                </div>
+                                                <div class="col-auto d-flex flex-column align-items-center justify-content-center">
+                                                    <h5 class="m-0">1</h5>
+                                                    <p class="lh-1 mb-0"><small class="text-70">answers</small></p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="list-group-item p-3">
+                                            <div class="row align-items-start">
+                                                <div class="col-md-3 mb-8pt mb-md-0">
+                                                    <div class="media align-items-center">
+                                                        <div class="media-left mr-12pt">
+                                                            <a href="#"
+                                                               class="avatar avatar-sm">
+                                                                <!-- <img src="../../AC" alt="avatar" class="avatar-img rounded-circle"> -->
+                                                                <span class="avatar-title rounded-circle">AC</span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="d-flex flex-column media-body media-middle">
+                                                            <a href="#"
+                                                               class="card-title">Adam Curtis</a>
+                                                            <small class="text-muted">3 days ago</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col mb-8pt mb-md-0">
+                                                    <p class="mb-0"><a href="discussion.html"
+                                                           class="text-body"><strong>Why am I getting an error when trying to install angular/http@2.4.2</strong></a></p>
+
+                                                </div>
+                                                <div class="col-auto d-flex flex-column align-items-center justify-content-center">
+                                                    <h5 class="m-0">1</h5>
+                                                    <p class="lh-1 mb-0"><small class="text-70">answers</small></p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="card-footer p-8pt">
+
+                                        <ul class="pagination justify-content-start pagination-xsm m-0">
+                                            <li class="page-item disabled">
+                                                <a class="page-link"
+                                                   href="#"
+                                                   aria-label="Previous">
+                                                    <span aria-hidden="true"
+                                                          class="material-icons">chevron_left</span>
+                                                    <span>Prev</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link"
+                                                   href="#"
+                                                   aria-label="Page 1">
+                                                    <span>1</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link"
+                                                   href="#"
+                                                   aria-label="Page 2">
+                                                    <span>2</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link"
+                                                   href="#"
+                                                   aria-label="Next">
+                                                    <span>Next</span>
+                                                    <span aria-hidden="true"
+                                                          class="material-icons">chevron_right</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                        <!-- <ul class="pagination justify-content-center pagination-sm">
+  <li class="page-item disabled">
+    <a class="page-link" href="#" aria-label="Previous">
+      <span aria-hidden="true" class="material-icons">chevron_left</span>
+      <span>Prev</span>
+    </a>
+  </li>
+  <li class="page-item active">
+    <a class="page-link" href="#" aria-label="1">
+      <span>1</span>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="#" aria-label="1">
+      <span>2</span>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="#" aria-label="Next">
+      <span>Next</span>
+      <span aria-hidden="true" class="material-icons">chevron_right</span>
+    </a>
+  </li>
+</ul> -->
                                     </div>
                                 </div>
+
+                               
+
+                                
+
 
                             </div>
                             <div class="col-lg-4">
 
-                                <div class="accordion js-accordion accordion--boxed mb-24pt"
-                                     id="instructor-accordion">
-                                    <div class="accordion__item">
-                                        <a href="#"
-                                           class="accordion__toggle collapsed"
-                                           data-toggle="collapse"
-                                           data-target="#instructor-accordion-menu"
-                                           data-parent="#instructor-accordion">
-                                            <span class="flex">My Account</span>
-                                            <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
-                                        </a>
-                                        <div class="accordion__menu collapse"
-                                             id="instructor-accordion-menu">
-                                            <div class="accordion__menu-link active">
-                                                <span class="icon-holder icon-holder--small icon-holder--light rounded-circle d-inline-flex icon--left">
-                                                    <i class="material-icons icon-16pt">school</i>
-                                                </span>
-                                                <a class="flex"
-                                                   href="instructor-dashboard.html">Dashboard</a>
-                                            </div>
-                                            <div class="accordion__menu-link">
-                                                <span class="icon-holder icon-holder--small icon-holder--light rounded-circle d-inline-flex icon--left">
-                                                    <i class="material-icons icon-16pt">import_contacts</i>
-                                                </span>
-                                                <a class="flex"
-                                                   href="instructor-courses.html">Manage Courses</a>
-                                            </div>
-                                            <div class="accordion__menu-link">
-                                                <span class="icon-holder icon-holder--small icon-holder--light rounded-circle d-inline-flex icon--left">
-                                                    <i class="material-icons icon-16pt">help</i>
-                                                </span>
-                                                <a class="flex"
-                                                   href="instructor-quizzes.html">Manage Quizzes</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
                                 <div class="page-separator">
-                                    <div class="page-separator__text">Recommended</div>
+                                    <div class="page-separator__text">Important Dates</div>
                                 </div>
 
-                                <div class="mb-8pt d-flex align-items-center">
-                                    <a href="student-course.html"
-                                       class="avatar avatar-4by3 overlay overlay--primary mr-12pt">
-                                        <img src="public/images/paths/angular_routing_200x168.png"
-                                             alt="Angular Routing In-Depth"
-                                             class="avatar-img rounded">
-                                        <span class="overlay__content"></span>
-                                    </a>
-                                    <div class="flex">
-                                        <a class="card-title mb-4pt"
-                                           href="student-course.html">Angular Routing In-Depth</a>
-                                        <div class="d-flex align-items-center">
-                                            <div class="rating mr-8pt">
+                                <div id="carouselExampleFade"
+                                     class="carousel carousel-card slide mb-24pt">
+                                    <div class="carousel-inner">
 
-                                                <span class="rating__item"><span class="material-icons">star</span></span>
+                                        <div class="carousel-item active">
 
-                                                <span class="rating__item"><span class="material-icons">star</span></span>
+                                            <a class="card border-0 mb-0"
+                                               href="#">
+                                                <img src="public/images/achievements/flinto.png"
+                                                     alt="Flinto"
+                                                     class="card-img"
+                                                     style="max-height: 100%; width: initial;">
+                                                <div class="fullbleed bg-primary"
+                                                     style="opacity: .5;"></div>
+                                                <span class="card-body d-flex flex-column align-items-center justify-content-center fullbleed">
+                                                    <span class="row flex-nowrap">
+                                                        <span class="col-auto text-center d-flex flex-column justify-content-center align-items-center">
+                                                            <span class="h5 text-white text-uppercase font-weight-normal m-0 d-block">Registration</span>
+                                                            <span class="text-white-60 d-block mb-24pt">Jun 5, 2021</span>
+                                                        </span>
+                                                        <span class="col d-flex flex-column">
+                                                            <span class="text-right flex mb-16pt">
+                                                                <img src="public/images/paths/flinto_40x40%402x.png"
+                                                                     width="64"
+                                                                     alt="Flinto"
+                                                                     class="rounded">
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                    <span class="row flex-nowrap">
+                                                        <span class="col-auto text-center d-flex flex-column justify-content-center align-items-center">
+                                                            <img src="public/images/illustration/achievement/128/white.png"
+                                                                 width="64"
+                                                                 alt="achievement">
+                                                        </span>
+                                                        <span class="col d-flex flex-column">
+                                                            <span>
+                                                                <span class="card-title text-white mb-4pt d-block">Course Registration</span>
+                                                                <span class="text-white-60">Course Registration closes on 21 July 2021</span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                            </a>
 
-                                                <span class="rating__item"><span class="material-icons">star</span></span>
-
-                                                <span class="rating__item"><span class="material-icons">star_border</span></span>
-
-                                                <span class="rating__item"><span class="material-icons">star_border</span></span>
-
-                                            </div>
-                                            <small class="text-muted">3/5</small>
                                         </div>
-                                    </div>
-                                </div>
+                                        <div class="carousel-item">
 
-                                <div class="mb-16pt d-flex align-items-center">
-                                    <a href="student-course.html"
-                                       class="avatar avatar-4by3 overlay overlay--primary mr-12pt">
-                                        <img src="public/images/paths/angular_testing_200x168.png"
-                                             alt="Angular Unit Testing"
-                                             class="avatar-img rounded">
-                                        <span class="overlay__content"></span>
-                                    </a>
-                                    <div class="flex">
-                                        <a class="card-title mb-4pt"
-                                           href="student-course.html">Angular Unit Testing</a>
-                                        <div class="d-flex align-items-center">
-                                            <div class="rating mr-8pt">
+                                            <a class="card border-0 mb-0"
+                                               href="#">
+                                                <img src="public/images/achievements/flinto.png"
+                                                     alt="Flinto"
+                                                     class="card-img"
+                                                     style="max-height: 100%; width: initial;">
+                                                <div class="fullbleed bg-primary"
+                                                     style="opacity: .5;"></div>
+                                                <span class="card-body d-flex flex-column align-items-center justify-content-center fullbleed">
+                                                    <span class="row flex-nowrap">
+                                                        <span class="col-auto text-center d-flex flex-column justify-content-center align-items-center">
+                                                            <span class="h5 text-white text-uppercase font-weight-normal m-0 d-block">Registration</span>
+                                                            <span class="text-white-60 d-block mb-24pt">Jun 5, 2021</span>
+                                                        </span>
+                                                        <span class="col d-flex flex-column">
+                                                            <span class="text-right flex mb-16pt">
+                                                                <img src="public/images/paths/flinto_40x40%402x.png"
+                                                                     width="64"
+                                                                     alt="Flinto"
+                                                                     class="rounded">
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                    <span class="row flex-nowrap">
+                                                        <span class="col-auto text-center d-flex flex-column justify-content-center align-items-center">
+                                                            <img src="public/images/illustration/achievement/128/white.png"
+                                                                 width="64"
+                                                                 alt="achievement">
+                                                        </span>
+                                                        <span class="col d-flex flex-column">
+                                                            <span>
+                                                                <span class="card-title text-white mb-4pt d-block">Course Registration</span>
+                                                                <span class="text-white-60">Course Registration closes on 21 July 2021</span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                            </a>
 
-                                                <span class="rating__item"><span class="material-icons">star</span></span>
-
-                                                <span class="rating__item"><span class="material-icons">star</span></span>
-
-                                                <span class="rating__item"><span class="material-icons">star</span></span>
-
-                                                <span class="rating__item"><span class="material-icons">star</span></span>
-
-                                                <span class="rating__item"><span class="material-icons">star_border</span></span>
-
-                                            </div>
-                                            <small class="text-muted">4/5</small>
                                         </div>
+                                        
+
                                     </div>
+                                    <!-- <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+    <span class="carousel-control-icon material-icons" aria-hidden="true">keyboard_arrow_left</span>
+    <span class="sr-only">Previous</span>
+  </a> -->
+                                    <a class="carousel-control-next"
+                                       href="#carouselExampleFade"
+                                       role="button"
+                                       data-slide="next">
+                                        <span class="carousel-control-icon material-icons"
+                                              aria-hidden="true">keyboard_arrow_right</span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
                                 </div>
+                                
+                                
+                                <div class="page-separator">
+                                    <div class="page-separator__text">Tasks</div>
+                                </div>
+
+                                
 
                                 <div class="list-group list-group-flush">
                                     <div class="list-group-item px-0">
                                         <a href="student-course.html"
-                                           class="card-title mb-4pt">Angular Best Practices</a>
+                                           class="card-title mb-4pt">Submit Assignments</a>
                                         <p class="lh-1 mb-0">
-                                            <small class="text-muted mr-8pt">6h 40m</small>
-                                            <small class="text-muted mr-8pt">13,876 Views</small>
-                                            <small class="text-muted">13 May 2018</small>
+                                            <small class="text-muted mr-8pt">Due in 6 hours 40  minutes</small>
+                                            
                                         </p>
                                     </div>
-                                    <div class="list-group-item px-0">
-                                        <a href="student-course.html"
-                                           class="card-title mb-4pt">Unit Testing in Angular</a>
-                                        <p class="lh-1 mb-0">
-                                            <small class="text-muted mr-8pt">6h 40m</small>
-                                            <small class="text-muted mr-8pt">13,876 Views</small>
-                                            <small class="text-muted">13 May 2018</small>
-                                        </p>
-                                    </div>
-                                    <div class="list-group-item px-0">
-                                        <a href="student-course.html"
-                                           class="card-title mb-4pt">Migrating Applications from AngularJS to Angular</a>
-                                        <p class="lh-1 mb-0">
-                                            <small class="text-muted mr-8pt">6h 40m</small>
-                                            <small class="text-muted mr-8pt">13,876 Views</small>
-                                            <small class="text-muted">13 May 2018</small>
-                                        </p>
-                                    </div>
+                                   
                                 </div>
 
                             </div>
@@ -873,6 +1113,7 @@
 
                     </div>
                 </div>
+
 
             </div>
             <!-- // END Header Layout Content -->
